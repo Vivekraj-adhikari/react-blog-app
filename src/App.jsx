@@ -6,6 +6,7 @@ import { login, logout } from './store/authSlice';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import { Outlet } from 'react-router-dom';
+import Select from './components/Select';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -26,6 +27,7 @@ function App() {
   return !loading ? (
     <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
       <div className="w-full block">
+        <Select  />
         <Header />
         <main>
           TODO:{/* <Outlet /> */}
